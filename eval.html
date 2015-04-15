@@ -1,0 +1,37 @@
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<textarea id="codeText" style="width: 400px; height: 250px;">
+function square(x) {
+	var r;
+	// ide jon a kod
+	return r;
+}
+</textarea>
+<br/>
+<button id="buttonEvaulate">Eval!</button>
+
+<script>
+	$(document).ready(function() {
+		$('#buttonEvaulate').click(function() {
+			var code = $('#codeText').val();
+			
+
+			try {
+				var e = eval(code);
+				if (square(5) == 25) {
+					console.log('helyes');
+				} else {
+					console.log('nem helyes');
+				}
+			} catch (err) {
+				console.log(err.message, err.lineNumber);
+			}
+		});
+
+	})
+</script>
+
+</body>
+</html>
